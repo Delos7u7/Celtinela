@@ -49,19 +49,18 @@
   }
   
   .navMenu {
-    display: none;
   }
   
   .sideNav {
     position: fixed;
     top: 0;
     left: -250px; /* Inicialmente oculto fuera de la pantalla */
-    width: 250px;
+    width: 200px;
     height: 100vh;
     background-color: #0F243D;
-    transition: left 0.3s ease; /* Agrega una transición suave */
+    transition: left 0.3s ease; 
     z-index: 1; /* Asegura que la barra lateral esté por encima del contenido */
-  }
+}
   
   .sideNav.show {
     left: 0; /* Muestra la barra lateral */
