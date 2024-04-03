@@ -1,90 +1,252 @@
+/* Va en todas las páginas */
 * {
-    padding: 0;
-    margin: 0;
-    text-decoration: none;
-    box-sizing: border-box;
-    list-style: none;
-  }
-  
-  body, html {
-    height: 100%;
-  }
-  
-  .content {
-    min-height: 100vh;
-    background: linear-gradient(135deg, #D65A51, #B24741, #8E3431, #6A2121, #451616, #000000);
-  }
-  
-  header {
-    width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .menuIcon {
-    background: none;
-    padding: 0;
-    margin: 0;
-    border: none;
-    box-shadow: none;
-    font-size: 1.5rem;
-    color: #333;
-    margin-left: 10px;
-    margin-top: 10px;
-    cursor: pointer;
-  }
-  
-  .notificationIcon {
-    background: none;
-    padding: 0;
-    margin: 0;
-    border: none;
-    box-shadow: none;
-    font-size: 1.5rem;
-    color: #333;
-    margin-right: 10px;
-    margin-top: 10px;
-  }
-  
-  .navMenu {
-  }
-  
-  .sideNav {
-    position: fixed;
-    top: 0;
-    left: -250px; /* Inicialmente oculto fuera de la pantalla */
-    width: 200px;
-    height: 100vh;
-    background-color: #0F243D;
-    transition: left 0.3s ease; 
-    z-index: 1; /* Asegura que la barra lateral esté por encima del contenido */
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+  list-style: none;
 }
-  
-  .sideNav.show {
-    left: 0; /* Muestra la barra lateral */
-  }
-  
-  .sideNav ul {
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-  }
-  
-  .sideNav ul li {
-    margin-bottom: 10px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Agrega línea de separación */
-  }
-  
-  .sideNav ul li:last-child {
-    margin-bottom: 0;
-    border-bottom: none;
-  }
-  
-  .sideNav ul li a {
-    color: #fff;
-    text-decoration: none;
-    padding: 10px;
-    display: block;
-  }
+
+body,
+html {
+  height: 100%;
+}
+
+.content {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #D65A51, #B24741, #8E3431, #6A2121, #451616, #000000);
+}
+
+header {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menuIcon {
+  background: none;
+  padding: 0;
+  margin: 0;
+  border: none;
+  box-shadow: none;
+  font-size: 2.5rem;
+  color: #1f1f1f;
+  margin-left: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.notificationIcon {
+  background: none;
+  padding: 0;
+  margin: 0;
+  border: none;
+  box-shadow: none;
+  font-size: 2.5rem;
+  color: #1f1f1f;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+.navMenu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* Para distribuir los elementos verticalmente */
+  height: 100%;
+  /* Ajustar la altura al 100% del menú lateral */
+}
+
+.iconoCerrarSesion {
+  align-self: flex-end;
+  /* Posicionar el ícono al final del eje vertical (abajo) */
+  margin-right: 10px;
+  /* Añadir margen derecho para ajustar la posición */
+  color: white;
+  font-size: 1.5rem;
+}
+
+.sideNav {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  /* Inicialmente oculto fuera de la pantalla */
+  width: 200px;
+  height: 100vh;
+  background-color: #0F243D;
+  transition: left 0.3s linear;
+  z-index: 1;
+  /* Asegura que la barra lateral esté por encima del contenido */
+}
+
+.sideNav.show {
+  left: 0;
+  /* Muestra la barra lateral */
+}
+
+.sideNav ul {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.sideNav ul li {
+  margin-bottom: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  /* Agrega línea de separación */
+}
+
+.sideNav ul li:last-child {
+  margin-bottom: 0;
+  border-bottom: none;
+}
+
+.sideNav ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+  display: block;
+  font-size: 1.5rem;
+}
+
+/* Aquí empieza el código de esta página */
+
+.titleVehiculo-container {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.button-add--container {
+  display: flex;
+  padding: 15px;
+}
+
+.button-add--container p {
+  color: white;
+  font-size: 1.8rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+}
+
+.añadirIcon {
+  margin-left: 10px;
+  font-size: 1.1rem;
+  color: white;
+}
+
+.tablaVehiculos--container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tablaVehiculos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  max-height: 500px; /* Ajusta la altura máxima según tu imagen más grande */
+  overflow-y: auto; /* Agrega un scroll vertical solo si el contenido excede la altura máxima */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  color: rgb(223, 223, 223);
+}
+
+.veihuculo-no {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  background: radial-gradient(circle at center, #6A2B2B, #6E2F2F, #873434, #A23C3C, #BD4545, #D45050);
+  margin-bottom: 10px;
+  padding: 10px;
+  font-size: 15px;
+  display: flex;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.4); /* Agrega sombra en la parte inferior */
+}
+
+.left-side-tableVehi {
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  margin-right: 16px;
+}
+
+.left-side-tableVehi--name{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.left-side-tableVehi--placa{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.left-side-tableVehi--numberID{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.right-side-tableVehi {
+  width: 35%;
+  height: 100%;
+  position: relative;
+}
+
+.vehi-image-container {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+}
+
+.vehi-image-container::before {
+  content: "";
+  display: block;
+  padding-top: 100%; /* Mantén el aspect ratio 1:1 para el círculo */
+}
+
+.vehi-image {
+  width: 100%;
+  height: 100%;
+  background-image: url('../imagenes/camion1.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.flotante-container {
+  position: fixed;
+  bottom: 20px;
+  /* Ajusta la distancia desde abajo */
+  right: 20px;
+  /* Ajusta la distancia desde la derecha */
+  z-index: 999;
+  /* Asegura que el contenedor esté por encima de otros elementos */
+}
+
+.agregar-icon {
+  font-size: 2.5rem;
+  /* Ajusta el tamaño del icono */
+  color: #fff;
+  /* Ajusta el color del icono */
+  border-radius: 50%;
+  /* Hace que el fondo sea un círculo */
+  padding: 10px;
+  /* Ajusta el espacio interno del círculo */
+  cursor: pointer;
+  /* Cambia el cursor al pasar sobre el icono */
+}
