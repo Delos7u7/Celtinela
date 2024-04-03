@@ -32,7 +32,7 @@ header {
   border: none;
   box-shadow: none;
   font-size: 2.5rem;
-  color: #1f1f1f;
+  color: white;
   margin-left: 10px;
   margin-top: 10px;
   cursor: pointer;
@@ -45,7 +45,7 @@ header {
   border: none;
   box-shadow: none;
   font-size: 2.5rem;
-  color: #1f1f1f;
+  color: white;
   margin-right: 10px;
   margin-top: 10px;
 }
@@ -164,7 +164,7 @@ header {
   width: 100%;
   height: auto;
   border-radius: 20px;
-  background: radial-gradient(circle at center, #6A2B2B, #6E2F2F, #873434, #A23C3C, #BD4545, #D45050);
+  background: radial-gradient(circle at center, #D45050, #BD4545, #A23C3C, #873434, #6E2F2F, #6A2B2B);
   margin-bottom: 10px;
   padding: 10px;
   font-size: 15px;
