@@ -202,8 +202,28 @@ button-add--container {
     padding: 20px;
     background-color: #0F243D;
     border-radius: 50%;
-}
-
-.iconCamera {
+    position: relative;
+  }
+  
+  .iconCamera {
     font-size: 40px;
-}
+  }
+  
+  #cameraPreview {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .sendButton--container{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .sendIcon{
+        font-size: 30px
+  }

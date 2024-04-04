@@ -62,12 +62,19 @@
                 <input type="text" name="" id="" class="input-datosVehiculo">
             </div>
             <div class="icon--container">
-                <i class="bi bi-camera iconCamera"></i>
+                <i class="bi bi-camera iconCamera" id="cameraButton"></i>
+                <video id="cameraPreview" width="200" height="200" style="border-radius: 50%;"></video>
+                <canvas id="cameraCanvas" width="200" height="200" style="display: none; border-radius: 50%;"></canvas>
+            </div>
+            <button id="captureButton" style="display: none;">Tomar Foto</button>
+            <div class="sendButton--container">
+                <i class="bi bi-arrow-right-square-fill sendIcon"></i>
             </div>
         </div>
 
     </div>
     <script src="../js/vehiculosRegistrados.js"></script>
+    <script src="../js/registrarVehiculos.js"></script>
 </body>
 
 </html>
