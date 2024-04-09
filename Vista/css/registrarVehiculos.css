@@ -216,6 +216,12 @@ header {
     transform: translate(-50%, -50%);
   }
 
+  .iconSuccess {
+    font-size: 40px; /* Tamaño del ícono */
+    color: white; /* Color del ícono */
+    background-color: transparent; /* Fondo transparente */
+}
+
   .sendButton--container{
     width: 100%;
     height: auto;

@@ -62,16 +62,13 @@
                 <input type="text" name="" id="" class="input-datosVehiculo">
             </div>
             <div class="icon--container" style="position: relative;">
-                <i class="bi bi-camera iconCamera" id="cameraButton"></i>
-                <video id="cameraPreview" width="200" height="200"
-                    style="border-radius: 50%; position: relative; top: 50%; left: 50%; transform: translate(-50%, -50%); display: none;"></video>
-                <canvas id="cameraCanvas" width="200" height="200" style="border-radius: 50%; display: none;"></canvas>
+                <label for="fileUpload" class="bi bi-upload iconCamera" id="uploadButton"></label>
+                <input type="file" id="fileUpload" style="display: none;" />
+                <!-- Este input de tipo file estará oculto y será activado por el botón de upload -->
             </div>
-            <button id="captureButton" style="display: none;">Tomar Foto</button>
+            <img id="previewImage" src="" alt="Vista previa de la imagen" style="display: none;" />
             <div class="sendButton--container">
-                <a href="./camara.html">
                     <i class="bi bi-arrow-right-square-fill sendIcon"></i>
-                </a>
             </div>
         </div>
 
