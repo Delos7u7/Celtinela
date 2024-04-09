@@ -61,12 +61,12 @@
                 <p>Número de serie o VIN:</p>
                 <input type="text" name="" id="" class="input-datosVehiculo">
             </div>
-            <div class="icon--container">
+            <div class="icon--container" style="position: relative;">
                 <i class="bi bi-camera iconCamera" id="cameraButton"></i>
-                <video id="cameraPreview" width="200" height="200" style="border-radius: 50%;"></video>
-                <canvas id="cameraCanvas" width="200" height="200" style="display: none; border-radius: 50%;"></canvas>
-            </div>
-            <button id="captureButton" style="display: none;">Tomar Foto</button>
+                <video id="cameraPreview" width="200" height="200" style="border-radius: 50%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); display: none;"></video>
+                <canvas id="cameraCanvas" width="200" height="200" style="border-radius: 50%; display: none;"></canvas>
+              </div>
+              <button id="captureButton" style="display: none;">Tomar Foto</button>
             <div class="sendButton--container">
                 <i class="bi bi-arrow-right-square-fill sendIcon"></i>
             </div>
