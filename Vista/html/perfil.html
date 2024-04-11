@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/perfil.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <div class="content">
+        <header>
+            <span class="bi bi-list menuIcon"></span>
+            <span class="bi bi-bell notificationIcon"></span>
+            <nav class="navMenu sideNav"> <!-- Aquí he cambiado la clase a navMenu -->
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Perfil</a></li>
+                    <li><a href="#">Ayuda</a></li>
+                </ul>
+                <i class="bi bi-box-arrow-left iconoCerrarSesion"></i>
+            </nav>
+        </header>
+        <div class="titlePerfil-container">
+            <div class="button-add--container">
+                <p>Perfil</p>
+            </div>
+        </div>
+
+
+        <div class="datosPerfil--container">
+            <div class="datosPerfil">
+                <div class="usuario--container">
+                    <p>Nombre de Usuario</p>
+                    <div class="change-userpass">
+                        <p>wefweffe</p>
+                        <i class="bi bi-pencil-fill" onclick="openModal('usernameModal')"></i>
+                    </div>
+                </div>
+                <div class="contraseña--container">
+                    <p>Contraseña</p>
+                    <div class="change-userpass">
+                        <p id="passwordDisplay">••••••••••</p> <!-- Mostrará 16 puntos por defecto -->
+                        <i class="bi bi-pencil-fill" onclick="openModal('passwordModal')"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal para cambiar el nombre de usuario -->
+        <div id="usernameModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('usernameModal')">&times;</span>
+                <h2>Cambiar Nombre de Usuario</h2>
+                <input type="text" id="newUsername" placeholder="Nuevo Nombre de Usuario">
+                <button onclick="saveUsername()">Guardar</button>
+            </div>
+        </div>
+
+        <!-- Modal para cambiar la contraseña -->
+        <div id="passwordModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('passwordModal')">&times;</span>
+                <h2>Cambiar Contraseña</h2>
+                <input type="password" id="currentPassword" placeholder="Contraseña Actual">
+                <input type="password" id="newPassword" placeholder="Nueva Contraseña">
+                <input type="password" id="confirmPassword" placeholder="Confirmar Nueva Contraseña">
+                <button onclick="savePassword()">Guardar</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="../js/vehiculosRegistrados.js"></script>
+<script src="../js/perfil.js"></script>
+
+</html>
