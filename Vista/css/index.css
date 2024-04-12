@@ -140,5 +140,6 @@
   }
   
   .registrate-aqui {
-    text-decoration: underline;
+    text-decoration: none;
+    color: white;
   }
