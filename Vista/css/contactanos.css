@@ -1,0 +1,128 @@
+/* Va en todas las páginas */
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+body,
+html {
+    height: 100%;
+}
+
+.content {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #D65A51, #B24741, #8E3431, #6A2121, #451616, #000000);
+}
+
+header {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menuIcon {
+    background: none;
+    padding: 0;
+    margin: 0;
+    border: none;
+    box-shadow: none;
+    font-size: 2.5rem;
+    color: white;
+    margin-left: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.notificationIcon {
+    background: none;
+    padding: 0;
+    margin: 0;
+    border: none;
+    box-shadow: none;
+    font-size: 2.5rem;
+    color: white;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+.navMenu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* Para distribuir los elementos verticalmente */
+    height: 100%;
+    /* Ajustar la altura al 100% del menú lateral */
+}
+
+.iconoCerrarSesion {
+    align-self: flex-end;
+    /* Posicionar el ícono al final del eje vertical (abajo) */
+    margin-right: 10px;
+    /* Añadir margen derecho para ajustar la posición */
+    color: white;
+    font-size: 1.5rem;
+}
+
+.sideNav {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    /* Inicialmente oculto fuera de la pantalla */
+    width: 200px;
+    height: 100vh;
+    background-color: #0F243D;
+    transition: left 0.3s linear;
+    z-index: 1;
+    /* Asegura que la barra lateral esté por encima del contenido */
+}
+
+.sideNav.show {
+    left: 0;
+    /* Muestra la barra lateral */
+}
+
+.sideNav ul {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.sideNav ul li {
+    margin-bottom: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    /* Agrega línea de separación */
+}
+
+.sideNav ul li:last-child {
+    margin-bottom: 0;
+    border-bottom: none;
+}
+
+.sideNav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    font-size: 1.5rem;
+}
+
+/* Aquí empieza el código de esta página */
+
+.contactanos--container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90vh; /* Ajusta la altura al 100% de la ventana */
+}
+
+.contactanos--container p {
+    color: white;
+    font-size: 30px;
+    margin: 5px 0; /* Añade un poco de espacio entre los párrafos */
+}

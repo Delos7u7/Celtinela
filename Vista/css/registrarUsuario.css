@@ -112,9 +112,7 @@ header {
 }
 
 /* Aquí empieza el código de esta página */
-
-
-.titleVehiculo-container {
+.titleUsuario-container { /* Cambiado el nombre del contenedor */
     width: 100%;
     height: 100px;
     display: flex;
@@ -123,25 +121,25 @@ header {
     margin-top: 30px;
 }
 
-.button-add--container {
+.button-add--container { /* Cambiado el nombre de la clase */
     display: flex;
     padding: 15px;
 }
 
-.button-add--container p {
+.button-add--container p { /* Cambiado el nombre de la clase */
     color: white;
     font-size: 1.8rem;
     font-weight: 800;
     letter-spacing: 0.1em;
 }
 
-.añadirIcon {
+.añadirIcon { /* Cambiado el nombre de la clase */
     margin-left: 10px;
     font-size: 1.1rem;
     color: white;
 }
 
-.datosVehiculo--container {
+.datosUsuario--container { /* Cambiado el nombre del contenedor */
     width: 100%;
     height: auto;
     display: flex;
@@ -151,7 +149,7 @@ header {
     color: white;
 }
 
-.datosVehiculo--container .input-container {
+.datosUsuario--container .input-container { /* Cambiado el nombre de la clase */
     margin-bottom: 10px;
     transition: transform 0.3s ease;
     /* Agregar transición para la transformación */
@@ -159,22 +157,22 @@ header {
     height: auto;
 }
 
-.datosVehiculo--container .input-container input {
+.datosUsuario--container .input-container input { /* Cambiado el nombre de la clase */
     width: 100%;
 }
 
-.datosVehiculo--container .input-container p {
+.datosUsuario--container .input-container p { /* Cambiado el nombre de la clase */
     margin-bottom: 10px;
 }
 
-.datosVehiculo--container .input-container:hover,
-.datosVehiculo--container .input-container:active {
+.datosUsuario--container .input-container:hover, /* Cambiado el nombre de la clase */
+.datosUsuario--container .input-container:active { /* Cambiado el nombre de la clase */
     font-weight: bolder;
     transform: scale(1.05);
     /* Escalar el contenedor al pasar el cursor */
 }
 
-.datosVehiculo--container .input-datosVehiculo {
+.datosUsuario--container .input-datosUsuario { /* Cambiado el nombre de la clase */
     border-style: none;
     border-bottom: 1px solid rgba(0, 0, 0, 0.4);
     background: transparent;
@@ -186,12 +184,12 @@ header {
     width: 90%;
 }
 
-.datosVehiculo--container .input-datosVehiculo:hover,
-.datosVehiculo--container .input-datosVehiculo:active {
+.datosUsuario--container .input-datosUsuario:hover, /* Cambiado el nombre de la clase */
+.datosUsuario--container .input-datosUsuario:active { /* Cambiado el nombre de la clase */
     border-bottom: 1px solid rgba(0, 0, 0, 0.5);
 }
 
-.datosVehiculo--container .input-datosVehiculo:focus {
+.datosUsuario--container .input-datosUsuario:focus { /* Cambiado el nombre de la clase */
     outline: none;
     transform: scale(1.05);
     /* Escalar el input al enfocar */

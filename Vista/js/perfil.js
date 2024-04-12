@@ -52,3 +52,15 @@ function closeModal(modalId) {
         modal.style.display = "none";
     }, 100); // Reducimos el tiempo de espera para cerrar el modal
 }
+
+// Obtén todos los modales
+var modals = document.querySelectorAll('.modal');
+
+// Para cada modal, agrega un event listener para cerrarlo al hacer clic fuera de él
+modals.forEach(function(modal) {
+    modal.addEventListener('click', function(event) {
+        if (event.target === modal) { // Si el clic ocurre en el fondo oscuro del modal
+            closeModal(modal.id); // Cierra el modal
+        }
+    });
+});
