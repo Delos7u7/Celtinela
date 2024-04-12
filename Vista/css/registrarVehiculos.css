@@ -223,16 +223,15 @@ header {
 }
 
 .sendButton--container {
-    width: 100%;
-    height: auto;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
     display: flex;
-    justify-content: flex-end; /* Alinear al final del eje horizontal */
-    align-items: flex-end; /* Alinear al final del eje vertical */
-    position: absolute; /* Posición absoluta para alinear respecto al contenedor padre */
-    bottom: 10px; /* Espacio desde la parte inferior */
-    right: 10px; /* Espacio desde la parte derecha */
+    justify-content: flex-end;
+    align-items: flex-end;
 }
 
-  .sendIcon{
-        font-size: 30px
-  }
+.sendIcon {
+    font-size: 30px;
+    color: white;
+}
