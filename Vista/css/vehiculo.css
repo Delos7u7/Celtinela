@@ -1,0 +1,232 @@
+/* Va en todas las páginas */
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+body,
+html {
+    height: 100%;
+}
+
+.content {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #D65A51, #B24741, #8E3431, #6A2121, #451616, #000000);
+}
+
+header {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menuIcon {
+    background: none;
+    padding: 0;
+    margin: 0;
+    border: none;
+    box-shadow: none;
+    font-size: 2.5rem;
+    color: white;
+    margin-left: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.notificationIcon {
+    background: none;
+    padding: 0;
+    margin: 0;
+    border: none;
+    box-shadow: none;
+    font-size: 2.5rem;
+    color: white;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+.navMenu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* Para distribuir los elementos verticalmente */
+    height: 100%;
+    /* Ajustar la altura al 100% del menú lateral */
+}
+
+.iconoCerrarSesion {
+    align-self: flex-end;
+    /* Posicionar el ícono al final del eje vertical (abajo) */
+    margin-right: 10px;
+    /* Añadir margen derecho para ajustar la posición */
+    color: white;
+    font-size: 1.5rem;
+}
+
+.sideNav {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    /* Inicialmente oculto fuera de la pantalla */
+    width: 200px;
+    height: 100vh;
+    background-color: #0F243D;
+    transition: left 0.3s linear;
+    z-index: 1;
+    /* Asegura que la barra lateral esté por encima del contenido */
+}
+
+.sideNav.show {
+    left: 0;
+    /* Muestra la barra lateral */
+}
+
+.sideNav ul {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.sideNav ul li {
+    margin-bottom: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    /* Agrega línea de separación */
+}
+
+.sideNav ul li:last-child {
+    margin-bottom: 0;
+    border-bottom: none;
+}
+
+.sideNav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    font-size: 1.5rem;
+}
+
+/* Aquí empieza el código de esta página */
+
+.titleVehiculo-container {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.button-add--container {
+    display: flex;
+    padding: 15px;
+}
+
+.button-add--container p {
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+}
+
+.mapa--container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    max-height: 80%;
+    margin-bottom: 20px;
+}
+.mapa {
+    max-width: 80%; /* Asegura que el mapa no exceda el tamaño del contenedor */
+    max-height: 100%; /* Asegura que el mapa no exceda el tamaño del contenedor */
+}
+
+.tabla--container {
+    width: 80%;
+    background-color: #0F243D;
+    border-radius: 10px;
+    max-width: 400px;
+    display: flex;
+    margin: 0 auto; /* Centra horizontalmente */
+}
+
+.mostrar-mas {
+    flex: 1; /* Ocupa el 20% del espacio disponible */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Espacio entre el icono y el botón */
+}
+
+.mostrar-mas button {
+    padding: 10px 20px;
+    background-color: #556475;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    height: 100%;
+}
+
+.icono-mostrar-mas {
+    font-size: 2rem;
+}
+
+.icono--container {
+    flex: 4; /* Ocupa el 80% del espacio disponible */
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Espacio entre el icono y los datos */
+    color: white;
+}
+
+.icono--container .icono-mostrar-mas {
+    margin-right: 10px; /* Espacio entre el icono y los datos */
+}
+
+.datos--container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.datos{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.datos p{
+    margin-right: 5px;
+}
+
+.button-mostras-mas{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+
+}
+
+/* Estilo inicial del contenedor adicional */
+.contenedor-adicional {
+    height: 0; /* Inicialmente oculto */
+    overflow: hidden; /* Oculta el contenido que desborda */
+    transition: height 0.3s ease; /* Transición suave de la altura */
+}
+
+/* Estilo cuando está visible */
+.contenedor-adicional.visible {
+    height: auto; /* Autoajusta la altura según el contenido */
+}
