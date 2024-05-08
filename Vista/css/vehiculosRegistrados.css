@@ -170,6 +170,8 @@ header {
   font-size: 15px;
   display: flex;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.4); /* Agrega sombra en la parte inferior */
+  text-decoration: none;
+  color: white;
 }
 
 .left-side-tableVehi {
