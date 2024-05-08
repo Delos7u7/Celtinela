@@ -11,35 +11,38 @@
 
 <body>
     <div class="content">
-        <div class="titleUsuario-container"> <!-- Cambié el nombre del contenedor -->
-            <div class="button-add--container">
-                <p>Datos del Usuario</p> <!-- Cambié el texto -->
+        <form id="miFormulario"> <!-- Agregado el atributo action y method -->
+            <div class="titleUsuario-container"> <!-- Cambié el nombre del contenedor -->
+                <div class="button-add--container">
+                    <p>Datos del Usuario</p> <!-- Cambié el texto -->
+                </div>
             </div>
-        </div>
-        <div class="datosUsuario--container"> <!-- Cambié el nombre del contenedor -->
-            <div class="input-container">
-                <p>Nombre:</p> <!-- Cambié el texto -->
-                <input type="text" name="nombre" id="nombre" class="input-datosUsuario"> <!-- Cambié la clase -->
+            <div class="datosUsuario--container"> <!-- Cambié el nombre del contenedor -->
+                <div class="input-container">
+                    <p>Nombre:</p> <!-- Cambié el texto -->
+                    <input type="text" name="nombre" id="nombre" class="input-datosUsuario"> <!-- Cambié la clase -->
+                </div>
+                <div class="input-container">
+                    <p>Correo:</p> <!-- Cambié el texto -->
+                    <input type="email" name="correo" id="correo" class="input-datosUsuario"> <!-- Cambié la clase -->
+                </div>
+                <div class="input-container">
+                    <p>Contraseña:</p> <!-- Cambié el texto -->
+                    <input type="password" name="contrasenia" id="contrasenia" class="input-datosUsuario">
+                    <!-- Cambié la clase -->
+                </div>
+                <div class="input-container">
+                    <p>Confirmar Contraseña:</p> <!-- Agregué el campo para confirmar la contraseña -->
+                    <input type="password" name="confirmarContrasena" id="confirmarContrasena" class="input-datosUsuario">
+                    <!-- Cambié la clase -->
+                </div>
             </div>
-            <div class="input-container">
-                <p>Correo:</p> <!-- Cambié el texto -->
-                <input type="email" name="correo" id="correo" class="input-datosUsuario"> <!-- Cambié la clase -->
+            <div class="sendButton--container">
+                <button type="submit" class="sendIcon">Enviar</button> <!-- Cambiado el icono por un botón de envío -->
             </div>
-            <div class="input-container">
-                <p>Contraseña:</p> <!-- Cambié el texto -->
-                <input type="password" name="contrasena" id="contrasena" class="input-datosUsuario">
-                <!-- Cambié la clase -->
-            </div>
-            <div class="input-container">
-                <p>Confirmar Contraseña:</p> <!-- Agregué el campo para confirmar la contraseña -->
-                <input type="password" name="confirmarContrasena" id="confirmarContrasena" class="input-datosUsuario">
-                <!-- Cambié la clase -->
-            </div>
-        </div>
-        <div class="sendButton--container">
-            <i class="bi bi-arrow-right-square-fill sendIcon"></i>
-        </div>
+        </form>
     </div>
 </body>
 
+<script src="../js/crearUsuario.js"></script>
 </html>
