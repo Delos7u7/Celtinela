@@ -28,6 +28,7 @@ function enviarFormulario() {
                 return response.json();
             }
         }).then(data => {
+            document.cookie = `token=${data.token}; max-age=3600; path=/`;
             console.log('Respuesta del servidor:', data);
             window.location.href = 'Vista/html/vehiculosRegistrados.html';
         }).catch(error => {
