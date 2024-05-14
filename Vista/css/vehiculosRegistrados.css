@@ -175,7 +175,7 @@ header {
 }
 
 .left-side-tableVehi {
-  width: 65%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   margin-right: 16px;
@@ -183,53 +183,22 @@ header {
 
 .left-side-tableVehi--name{
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   margin-bottom: 20px;
 }
 
 .left-side-tableVehi--placa{
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   margin-bottom: 20px;
 }
 
 .left-side-tableVehi--numberID{
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   margin-bottom: 10px;
 }
 
-.right-side-tableVehi {
-  width: 35%;
-  height: 100%;
-  position: relative;
-}
-
-.vehi-image-container {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  overflow: hidden;
-  position: relative;
-}
-
-.vehi-image-container::before {
-  content: "";
-  display: block;
-  padding-top: 100%; /* Mantén el aspect ratio 1:1 para el círculo */
-}
-
-.vehi-image {
-  width: 100%;
-  height: 100%;
-  background-image: url('../imagenes/camion1.jpg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
 .flotante-container {
   position: fixed;
   bottom: 20px;

@@ -28,52 +28,48 @@
                 <p>Datos del Vehículo</p>
             </div>
         </div>
-        <div class="datosVehiculo--container">
-            <div class="input-container">
-                <p>Alias del Vehículo:</p>
-                <input type="text" name="" id="" class="input-datosVehiculo">
+        <form id="formVehiculo">
+            <div class="datosVehiculo--container">
+                <div class="input-container">
+                    <p>Alias del Vehículo:</p>
+                    <input type="text" name="alias_vehiculo" id="alias_vehiculo" class="input-datosVehiculo">
+                </div>
+                <div class="input-container">
+                    <p>Tipo de Vehículo:</p>
+                    <input type="text" name="tipo_vehiculo" id="tipo_vehiculo" class="input-datosVehiculo">
+                </div>
+                <div class="input-container">
+                    <p>Marca:</p>
+                    <input type="text" name="marca" id="marca" class="input-datosVehiculo">
+                </div>
+                <div class="input-container">
+                    <p>Modelo:</p>
+                    <input type="text" name="modelo" id="modelo" class="input-datosVehiculo">
+                </div>
+                <div class="input-container">
+                    <p>Año:</p>
+                    <input type="text" name="año" id="año" class="input-datosVehiculo">
+                </div>
+                <div class="input-container">
+                    <p>Color:</p>
+                    <input type="text" name="color" id="color" class="input-datosVehiculo">
+                </div>
+                <div class="input-container">
+                    <p>Placa registrada:</p>
+                    <input type="text" name="placa" id="placa" class="input-datosVehiculo">
+                </div>
+                <div class="input-container">
+                    <p>Número de serie o VIN:</p>
+                    <input type="text" name="num_serie_vin" id="num_serie_vin" class="input-datosVehiculo">
+                </div>
             </div>
-            <div class="input-container">
-                <p>Tipo de Vehículo:</p>
-                <input type="text" name="" id="" class="input-datosVehiculo">
+            <div class="sendButton--container">
+                <button type="submit" class="bi bi-arrow-right-square-fill sendIcon"></button>
             </div>
-            <div class="input-container">
-                <p>Marca:</p>
-                <input type="text" name="" id="" class="input-datosVehiculo">
-            </div>
-            <div class="input-container">
-                <p>Modelo:</p>
-                <input type="text" name="" id="" class="input-datosVehiculo">
-            </div>
-            <div class="input-container">
-                <p>Año:</p>
-                <input type="text" name="" id="" class="input-datosVehiculo">
-            </div>
-            <div class="input-container">
-                <p>Color:</p>
-                <input type="text" name="" id="" class="input-datosVehiculo">
-            </div>
-            <div class="input-container">
-                <p>Placa registrada:</p>
-                <input type="text" name="" id="" class="input-datosVehiculo">
-            </div>
-            <div class="input-container">
-                <p>Número de serie o VIN:</p>
-                <input type="text" name="" id="" class="input-datosVehiculo">
-            </div>
-            <div class="icon--container" style="position: relative;">
-                <label for="fileUpload" class="bi bi-upload iconCamera" id="uploadButton"></label>
-                <input type="file" id="fileUpload" style="display: none;" />
-                <!-- Este input de tipo file estará oculto y será activado por el botón de upload -->
-            </div>
-            <img id="previewImage" src="" alt="Vista previa de la imagen" style="display: none;" />
-        </div>
-        <div class="sendButton--container">
-            <i class="bi bi-arrow-right-square-fill sendIcon"></i>
-        </div>
+        </form>
     </div>
     <script src="../js/vehiculosRegistrados.js"></script>
-    <script src="../js/registrarVehiculos.js"></script>
+    <script src="../js/crearVehiculo.js"></script>
 </body>
 
 </html>
