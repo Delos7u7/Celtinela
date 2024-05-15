@@ -86,7 +86,7 @@ function enviarToken() {
 }
 
 function getIdVehicle(token, id_vehiculo) {
-    const url = `http://localhost:8080/getVehicle?token=${token}&idVehiculo=${id_vehiculo}`;
+    const url = `http://192.168.0.37:8080/getVehicle?token=${token}&idVehiculo=${id_vehiculo}`;
 
     const requestOptions = {
         method: 'GET',
