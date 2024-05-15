@@ -155,18 +155,20 @@ header {
     max-width: 400px;
     display: flex;
     margin: 0 auto; /* Centra horizontalmente */
-}
-
-.mostrar-mas {
+    position: relative; /* Añadido para posicionar el clon */
+  }
+  
+  .mostrar-mas {
     flex: 1; /* Ocupa el 20% del espacio disponible */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 10px; /* Espacio entre el icono y el botón */
-}
-
-.mostrar-mas button {
+    position: relative; /* Añadido para posicionar el clon */
+  }
+  
+  .mostrar-mas button {
     padding: 10px 20px;
     background-color: #556475;
     color: white;
@@ -174,59 +176,143 @@ header {
     border-radius: 5px;
     cursor: pointer;
     height: 100%;
-}
-
-.icono-mostrar-mas {
+  }
+  
+  .icono-mostrar-mas {
     font-size: 2rem;
-}
-
-.icono--container {
+    padding: 5px 10px;
+  }
+  
+  .clon-mostrar-mas {
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #556475;
+    color: white;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: top 0.3s ease;
+    visibility: hidden;
+    cursor: pointer; /* Agregado para cambiar el cursor al hacer clic */
+  }
+  
+  .clon-mostrar-mas .icono-clon {
+    font-size: 2rem;
+  }
+  
+  .mostrar-mas.active .clon-mostrar-mas {
+    top: 0;
+    visibility: visible;
+  }
+  
+  .mostrar-mas.active .texto-original {
+    display: none;
+  }
+  
+  
+  .icono--container {
     flex: 4; /* Ocupa el 80% del espacio disponible */
     display: flex;
     align-items: center;
     gap: 20px; /* Espacio entre el icono y los datos */
     color: white;
-}
-
-.icono--container .icono-mostrar-mas {
+  }
+  
+  .icono--container .icono-mostrar-mas {
     margin-right: 10px; /* Espacio entre el icono y los datos */
-}
-
-.datos--container {
+  }
+  
+  .datos--container {
     display: flex;
     flex-direction: column;
     gap: 10px;
     width: 100%;
-}
-
-.datos{
+  }
+  
+  .datos {
     display: flex;
     width: 100%;
     justify-content: space-evenly;
-}
-
-.datos p{
+  }
+  
+  .datos p {
     margin-right: 5px;
-}
-
-.button-mostras-mas{
+  }
+  
+  .button-mostras-mas {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
     width: 100%;
     height: 100%;
-
-}
-
-/* Estilo inicial del contenedor adicional */
-.contenedor-adicional {
-    height: 0; /* Inicialmente oculto */
-    overflow: hidden; /* Oculta el contenido que desborda */
-    transition: height 0.3s ease; /* Transición suave de la altura */
-}
-
-/* Estilo cuando está visible */
-.contenedor-adicional.visible {
-    height: auto; /* Autoajusta la altura según el contenido */
-}
+  }
+.address--container {
+    margin-top: 30px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .alert-table {
+    width: 90%;
+    height: auto;
+    background-color: #0F243D;
+    color: white;
+    border-radius: 5px;
+  }
+  
+  .alert-table--header {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    align-items: center; /* Agregado para centrar verticalmente */
+  }
+  
+  .alert-table--body {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 11px;
+    text-align: center;
+    align-items: center; /* Agregado para centrar verticalmente */
+  }
+  
+  .header.address {
+    font-size: 10px;
+  }
+  
+  .header.noalert {
+    width: 5%;
+    font-size: 10px;
+  }
+  
+  .header.address {
+    width: 30%;
+  }
+  
+  .header.lat {
+    width: 20%;
+  }
+  
+  .header.long {
+    width: 20%;
+  }
+  
+  .header.date {
+    width: 13%;
+  }
+  
+  .header.hour {
+    width: 12%;
+  }

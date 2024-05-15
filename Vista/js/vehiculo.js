@@ -14,3 +14,16 @@ document.getElementById('año').textContent = año;
 document.getElementById('modelo').textContent = modelo;
 document.getElementById('placas').textContent = placas;
 document.getElementById('serie').textContent = serie;
+
+
+const mostrarMasBtn = document.querySelector('.button-mostras-mas');
+const mostrarMasContainer = document.querySelector('.mostrar-mas');
+const clonMostrarMas = document.querySelector('.clon-mostrar-mas');
+
+mostrarMasBtn.addEventListener('click', () => {
+  mostrarMasContainer.classList.toggle('active');
+});
+
+clonMostrarMas.addEventListener('click', () => {
+  mostrarMasContainer.classList.remove('active');
+});
