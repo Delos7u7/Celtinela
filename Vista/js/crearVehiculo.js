@@ -53,6 +53,7 @@ function enviarFormulario() {
             }
         }).then(data => {
             console.log('Respuesta del servidor:', data);
+            window.location.href="../html/vehiculosRegistrados.html"
         }).catch(error => {
             console.error('Error:', error);
         });
