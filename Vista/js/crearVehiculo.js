@@ -44,7 +44,7 @@ function enviarFormulario() {
         body: JSON.stringify(formData)
     };
 
-    fetch('http://localhost:8080/createVehicle', requestOptions)
+    fetch('http://192.168.0.37:8080/createVehicle', requestOptions)
         .then(response => {
             if (!response.ok) {
                 throw new Error('Error en la solicitud: ' + response.statusText);
@@ -53,6 +53,7 @@ function enviarFormulario() {
             }
         }).then(data => {
             console.log('Respuesta del servidor:', data);
+            window.location.href="../html/vehiculosRegistrados.html"
         }).catch(error => {
             console.error('Error:', error);
         });

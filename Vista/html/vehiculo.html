@@ -29,57 +29,78 @@
             </div>
         </div>
         <div class="mapa--container">
-            <iframe
+           <!-- <iframe
                 class="mapa"
                 width="80%"
                 height="350"
                 style="border:0; border-radius: 20px;"
                 frameborder="0" style="border:0"
-                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBIiZxQFCekeM29UC4gQD503JK0kLDf3Eg&q=Space+Needle,Seattle+WA" allowfullscreen>
+                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBIiZxQFCekeM29UC4gQD503JK0kLDf3Eg&q=Space+Needle,Seattle+WA" allowfullscreen> -->
                <!-- src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBIiZxQFCekeM29UC4gQD503JK0kLDf3Eg&amp;q=Space+Needle,Seattle+WA&amp;maptype=dark"
         allowfullscreen> -->
     </iframe>
         </div>
         <div class="tabla--container">
             <div class="mostrar-mas">
-                <button class="button-mostras-mas">
-                    <i class="bi bi-car-front-fill icono-mostrar-mas"></i>
-                    <p>Mostrar más</p>
-                </button>
+              <button class="button-mostras-mas">
+                <i class="bi bi-car-front-fill icono-mostrar-mas"></i>
+                <p class="texto-original">Mostrar más</p>
+              </button>
+              <div class="clon-mostrar-mas">
+                <i class="bi bi-geo-alt-fill icono-clon"></i>
+                <p>color</p>
+              </div>
             </div>
             <div class="icono--container">
-                <div class="datos--container">
-                    <div class="datos">
-                        <p>Nombre:</p>
-                        <span id="nombre">Toyota</span>
-                    </div>
-                    <div class="datos">
-                        <p>Marca:</p>
-                        <span id="marca">Toyota</span>
-                    </div>
-                    <div class="datos">
-                        <p>Año:</p>
-                        <span id="año">2022</span>
-                    </div>
-                    <div class="datos">
-                        <p>Modelo:</p>
-                        <span id="modelo">Corolla</span>
-                    </div>
-                    <div class="datos">
-                        <p>Placas:</p>
-                        <span id="placas">ABC123</span>
-                    </div>
-                    <div class="datos">
-                        <p>No.Serie:</p>
-                        <span id="serie">1234567890</span>
-                    </div>
+              <div class="datos--container">
+                <div class="datos">
+                  <p>Nombre:</p>
+                  <span id="nombre"></span>
+                </div>
+                <div class="datos">
+                  <p>Marca:</p>
+                  <span id="marca"></span>
+                </div>
+                <div class="datos">
+                  <p>Año:</p>
+                  <span id="año"></span>
+                </div>
+                <div class="datos">
+                  <p>Modelo:</p>
+                  <span id="modelo"></span>
+                </div>
+                <div class="datos">
+                  <p>Placas:</p>
+                  <span id="placas"></span>
+                </div>
+                <div class="datos">
+                  <p>No.Serie:</p>
+                  <span id="serie"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        <div class="address--container">
+            <div class="alert-table">
+                <div class="alert-table--header">
+                    <p class="header noalert">No.</p>
+                    <p class="header address">Direccion</p>
+                    <p class="header lat">Lat</p>
+                    <p class="header long">Long</p>
+                    <p class="header date">Fecha</p>
+                    <p class="header hour">Hora</p>
+                </div>
+                <div class="alert-table--body">
+                    <p class="header noalert">1</p>
+                    <p class="header address">Mariano Matamoros Mexico City Hidalgo</p>
+                    <p class="header lat">99.90992</p>
+                    <p class="header long">145.19531</p>
+                    <p class="header date">15/05/2024</p>
+                    <p class="header hour">10:03</p>
                 </div>
             </div>
         </div>
-        <div class="contenedor-adicional">
-            <!-- Contenido adicional aquí -->
-        </div>
-    </div>
 </body>
 <script src="../js/vehiculosRegistrados.js"></script>
 <script src="../js/vehiculo.js"></script>
