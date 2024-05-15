@@ -316,3 +316,106 @@ header {
   .header.hour {
     width: 12%;
   }
+
+  .vincular-dispositivo--container{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .vincular-dispositivo button{
+    all: unset;
+    border: 1px;
+    border-radius: 8px; /* Radio del borde de 5px */
+    padding: 10px;
+    background-color: #0F243D;
+    color: white;
+  }
+/* Estilos para el modal */
+.modal {
+    display: none; /* Por defecto, el modal está oculto */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+    background-color: #0F243D;
+    color: white;
+    margin: 50% auto;
+    padding: 20px;
+    border: none;
+    width: 80%;
+    border-radius: 10px;
+    animation-name: modal-open;
+    animation-duration: 0.3s;
+}
+
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal--container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.modal-body--container{
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.modal-body--container .body{
+    width: 30%;
+}
+
+.modal-body--container .bodyy{
+    width: 50%;
+}
+
+.numero_serie{
+    border: 1px solid;
+    border-radius: 8px;
+    padding: 5px;
+    background-color: initial;
+    color: white;
+}
+
+/* Transición para la transformación */
+@keyframes modal-open-transform {
+    0% {transform: scale(0.8);}
+    100% {transform: scale(1);}
+}
+
+/* Transición para la opacidad */
+@keyframes modal-open-opacity {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+/* Aplicar las animaciones por separado */
+.modal-content {
+    animation-name: modal-open-transform, modal-open-opacity;
+}

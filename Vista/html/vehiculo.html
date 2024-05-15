@@ -29,57 +29,57 @@
             </div>
         </div>
         <div class="mapa--container">
-           <!-- <iframe
+            <!-- <iframe
                 class="mapa"
                 width="80%"
                 height="350"
                 style="border:0; border-radius: 20px;"
                 frameborder="0" style="border:0"
                 src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBIiZxQFCekeM29UC4gQD503JK0kLDf3Eg&q=Space+Needle,Seattle+WA" allowfullscreen> -->
-               <!-- src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBIiZxQFCekeM29UC4gQD503JK0kLDf3Eg&amp;q=Space+Needle,Seattle+WA&amp;maptype=dark"
+            <!-- src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBIiZxQFCekeM29UC4gQD503JK0kLDf3Eg&amp;q=Space+Needle,Seattle+WA&amp;maptype=dark"
         allowfullscreen> -->
-    </iframe>
+            </iframe>
         </div>
         <div class="tabla--container">
             <div class="mostrar-mas">
-              <button class="button-mostras-mas">
-                <i class="bi bi-car-front-fill icono-mostrar-mas"></i>
-                <p class="texto-original">Mostrar más</p>
-              </button>
-              <div class="clon-mostrar-mas">
-                <i class="bi bi-geo-alt-fill icono-clon"></i>
-                <p>color</p>
-              </div>
+                <button class="button-mostras-mas">
+                    <i class="bi bi-car-front-fill icono-mostrar-mas"></i>
+                    <p class="texto-original">Mostrar más</p>
+                </button>
+                <div class="clon-mostrar-mas">
+                    <i class="bi bi-geo-alt-fill icono-clon"></i>
+                    <p>color</p>
+                </div>
             </div>
             <div class="icono--container">
-              <div class="datos--container">
-                <div class="datos">
-                  <p>Nombre:</p>
-                  <span id="nombre"></span>
+                <div class="datos--container">
+                    <div class="datos">
+                        <p>Nombre:</p>
+                        <span id="nombre"></span>
+                    </div>
+                    <div class="datos">
+                        <p>Marca:</p>
+                        <span id="marca"></span>
+                    </div>
+                    <div class="datos">
+                        <p>Año:</p>
+                        <span id="año"></span>
+                    </div>
+                    <div class="datos">
+                        <p>Modelo:</p>
+                        <span id="modelo"></span>
+                    </div>
+                    <div class="datos">
+                        <p>Placas:</p>
+                        <span id="placas"></span>
+                    </div>
+                    <div class="datos">
+                        <p>No.Serie:</p>
+                        <span id="serie"></span>
+                    </div>
                 </div>
-                <div class="datos">
-                  <p>Marca:</p>
-                  <span id="marca"></span>
-                </div>
-                <div class="datos">
-                  <p>Año:</p>
-                  <span id="año"></span>
-                </div>
-                <div class="datos">
-                  <p>Modelo:</p>
-                  <span id="modelo"></span>
-                </div>
-                <div class="datos">
-                  <p>Placas:</p>
-                  <span id="placas"></span>
-                </div>
-                <div class="datos">
-                  <p>No.Serie:</p>
-                  <span id="serie"></span>
-                </div>
-              </div>
             </div>
-          </div>
+        </div>
 
         <div class="address--container">
             <div class="alert-table">
@@ -99,6 +99,26 @@
                     <p class="header date">15/05/2024</p>
                     <p class="header hour">10:03</p>
                 </div>
+            </div>
+        </div>
+
+        <div class="vincular-dispositivo--container">
+            <div class="vincular-dispositivo">
+                <button class="vincular-dispositivo">Vincular dispositivo</button>
+            </div>
+        </div>
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <form id="modal-form" class="modal--container">
+                    <div class="modal-title--container">
+                        <h2>Introduce el número de serie de tu dispositivo</h2>
+                    </div>
+                    <div class="modal-body--container">
+                        <input class="bodyy numero_serie" type="text" id="numero_serie" name="numero_serie" placeholder="Número de serie">
+                        <button class="body" type="submit" id="enviar">Enviar</button>
+                    </div>
+                </form>
             </div>
         </div>
 </body>
