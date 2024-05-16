@@ -273,7 +273,7 @@ header {
     width: 100%;
     height: auto;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     text-align: center;
     align-items: center; /* Agregado para centrar verticalmente */
   }
@@ -293,29 +293,25 @@ header {
   }
   
   .header.noalert {
-    width: 5%;
-    font-size: 10px;
-  }
-  
-  .header.address {
-    width: 30%;
+    width: 25%;
+    font-size: 20px;
   }
   
   .header.lat {
-    width: 20%;
+    width: 25%;
+    font-size: 20px;
   }
   
   .header.long {
-    width: 20%;
+    width: 25%;
+    font-size: 20px;
   }
   
   .header.date {
-    width: 13%;
+    width: 25%;
+    font-size: 20px;
   }
   
-  .header.hour {
-    width: 12%;
-  }
 
   .vincular-dispositivo--container{
     width: 100%;
