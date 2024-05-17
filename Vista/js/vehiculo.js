@@ -146,6 +146,7 @@ function changeAlertState() {
     })
     .then(data => {
       console.log('Respuesta del servidor (changeAlertState):', data);
+      location.reload();  
 
     })
     .catch(error => {

@@ -22,10 +22,17 @@ window.addEventListener('load', function() {
 const notificationIcon = document.querySelector('.notificationIcon');
 const notificationContainer = document.querySelector('.notification-container');
 
-notificationIcon.addEventListener('click', () => {
+notificationIcon.addEventListener('click', (event) => {
+  event.stopPropagation(); // Evita que el clic en el icono se propague al documento
   notificationContainer.classList.toggle('show');
 });
 
+document.addEventListener('click', (event) => {
+  // Verifica si el clic fue fuera del contenedor de notificaciones
+  if (!notificationContainer.contains(event.target) && !notificationIcon.contains(event.target)) {
+    notificationContainer.classList.remove('show');
+  }
+});
 function notificar() {
   const token = ObtenerCookieDocumento();
   const url = `http://192.168.0.37:8080/notification?token=${token}`;

@@ -247,3 +247,48 @@ header {
     text-decoration: none;
     cursor: pointer;
 }
+
+/*Parte de notificacion*/
+.notificationIcon {
+    position: relative;
+  }
+  
+  .notification-container {
+    position: absolute;
+    bottom: -95px;
+    left: -200px;
+    width: 220px;
+    height: 100px;
+    background-color: #0f243dc4;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-20px);
+    transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+    overflow-y: auto;
+  }
+  
+  .notification-container.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+  }
+  
+  .notification-container .notification-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    width: 100%;
+    color: white;
+    font-size: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.199);
+  }
+  
+  .notification-item .icon-white {
+    color: white;
+  }
+  
+  /*Parte de notificacion termina*/
+  
