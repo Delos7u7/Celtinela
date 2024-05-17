@@ -168,6 +168,17 @@ header {
   .notification-item .icon-white {
     color: white;
   }
+
+  .no-notification{
+    font-size: 10px;
+    position: absolute;
+    top: 23px;
+    background-color: #451616;
+    padding: 5px;
+    border-radius: 10px;
+    margin-left: 2px;
+  }
+  
   
   /*Parte de notificacion termina*/
   

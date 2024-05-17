@@ -55,6 +55,15 @@ function notificar() {
 function mostrarNotificaciones(notificaciones) {
     const notificationContainer = document.querySelector('.notification-container');
     notificationContainer.innerHTML = ''; // Limpiar el contenido anterior
+
+    if (notificaciones.length > 0) {
+      document.getElementById("no-notification--id").textContent = "";
+      document.getElementById("no-notification--id").textContent = notificaciones.length;
+      document.getElementById("no-notification--id").classList.add('no-notification');
+    } else if (notificaciones.length==0) {
+      document.getElementById("no-notification--id").classList.remove('no-notification');
+      document.getElementById("no-notification--id").textContent = "";
+    }
   
     notificaciones.forEach(notificacion => {
       const notificationItem = document.createElement('div');

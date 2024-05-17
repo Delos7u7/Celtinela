@@ -46,6 +46,7 @@ function linkDevice() {
         })
         .then(data => {
             console.log('Datos recibidos desde el backend:', data);
+            location.reload();  
         })
         .catch(error => {
             console.error('Error:', error);
