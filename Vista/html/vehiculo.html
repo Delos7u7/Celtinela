@@ -13,7 +13,12 @@
     <div class="content">
         <header>
             <span class="bi bi-list menuIcon"></span>
-            <span class="bi bi-bell notificationIcon"></span>
+            <span class="bi bi-bell notificationIcon">
+                <p id="no-notification--id">
+                
+                </p>
+                <div class="notification-container"></div>
+            </span>
             <nav class="navMenu sideNav"> <!-- Aquí he cambiado la clase a navMenu -->
                 <ul>
                     <li><a href="../html/vehiculosRegistrados.html">Inicio</a></li>
@@ -100,6 +105,11 @@
             </div>
         </div>
 
+        <div id="revisar-alerta" class="revisar-alerta--container">
+            <div class="revisar-alerta">
+                <button class="revisar-alerta">Revisar Alertas</button>
+            </div>
+        </div>
         <div id="veincularDispositivo" class="vincular-dispositivo--container">
             <div class="vincular-dispositivo">
                 <button class="vincular-dispositivo">Vincular dispositivo</button>
@@ -119,8 +129,29 @@
                 </form>
             </div>
         </div>
+        <div id="modal-revisar-alerta" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <form id="modal-revisar-alerta-form" class="modal--container">
+                    <div class="modal-title--container" style="text-align: center;">
+                        <h2>¿Estás seguro que quieres marcar como revisadas las alertas?</h2>
+                    </div>
+                    <div class="modal-body--container">
+                        <div class="button-group" style="display: flex; justify-content: space-between; width: 100%;">
+                            <button class="btn body" type="button" id="correcto" style="color: green;">
+                                <i class="bi bi-check"></i>
+                            </button>
+                            <button class="btn body" type="button" id="incorrecto" style="color: red;">
+                                <i class="bi bi-x"></i>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
 </body>
 <script src="../js/vehiculosRegistrados.js"></script>
 <script src="../js/vehiculo.js"></script>
+<script src="../js/notificaciones.js"></script>
 
 </html>

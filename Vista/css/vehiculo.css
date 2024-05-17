@@ -280,7 +280,7 @@ header {
   
   .alert-table--body {
     width: 100%;
-    height: auto;
+    max-height: 100px;
     display: flex;
     justify-content: space-evenly;
     font-size: 11px;
@@ -315,7 +315,7 @@ header {
 
   .vincular-dispositivo--container{
     width: 100%;
-    height: 200px;
+    height: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -327,6 +327,23 @@ header {
     border-radius: 8px; /* Radio del borde de 5px */
     padding: 10px;
     background-color: #0F243D;
+    color: white;
+  }
+
+  .revisar-alerta--container{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .revisar-alerta{
+    all: unset;
+    border: 1px;
+    border-radius: 8px; /* Radio del borde de 5px */
+    padding: 5px;
+    background-color: #240606;
     color: white;
   }
 /* Estilos para el modal */
@@ -399,6 +416,22 @@ header {
     color: white;
 }
 
+.modal-title--container {
+  text-align: center; /* Centrar el título */
+}
+
+.button-group .btn {
+  display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45%; /* Ajustar el ancho de los botones */
+    font-size: 30px; /* Aumentar el tamaño de los iconos */
+    border: 1px solid rgba(0, 0, 0, 0.199); /* Quitar el borde del botón */
+    border-radius: 10px;
+    background-color: transparent; /* Hacer el fondo del botón transparente */
+    cursor: pointer; /* Cambiar el cursor al pasar por el botón */
+}
+
 /* Transición para la transformación */
 @keyframes modal-open-transform {
     0% {transform: scale(0.8);}
@@ -415,3 +448,65 @@ header {
 .modal-content {
     animation-name: modal-open-transform, modal-open-opacity;
 }
+
+.alert-table--body {
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+/*Parte de notificacion*/
+.notificationIcon {
+  position: relative;
+}
+
+.notification-container {
+  position: absolute;
+  bottom: -95px;
+  left: -200px;
+  width: 220px;
+  height: 100px;
+  background-color: #0f243dc4;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(-20px);
+  transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+  overflow-y: auto;
+}
+
+.notification-container.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+}
+
+.notification-container .notification-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  width: 100%;
+  color: white;
+  font-size: 15px;
+
+}
+
+.notification-item .icon-white {
+  color: white;
+}
+
+.no-notification{
+  font-size: 10px;
+  position: absolute;
+  top: 23px;
+  background-color: #451616;
+  padding: 5px;
+  border-radius: 10px;
+  margin-left: 2px;
+}
+
+
+/*Parte de notificacion termina*/
+
