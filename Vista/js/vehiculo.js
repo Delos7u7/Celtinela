@@ -36,7 +36,7 @@ function linkDevice() {
         body: JSON.stringify(data)
     };
     console.log(data);
-    const url = `http://192.168.0.37:8080/linkDevice`;
+    const url = `http://192.168.56.1:8080/linkDevice`;
     fetch(url, requestOptions)
         .then(response => {
             if (!response.ok) {
@@ -55,7 +55,7 @@ function linkDevice() {
 
 function getAlerts() {
   const id_vehiculo = decodeURIComponent(params.get('id_vehiculo'));
-  const url = `http://192.168.0.37:8080/getAlerts?id_vehiculo=${id_vehiculo}`;
+  const url = `http://192.168.56.1:8080/getAlerts?id_vehiculo=${id_vehiculo}`;
   const requestOptions = {
     method: 'GET',
     headers: {
@@ -129,7 +129,7 @@ function generarFilasTabla(datos) {
 
 function changeAlertState() {
   const id_vehiculo = decodeURIComponent(params.get('id_vehiculo'));
-  const url = `http://192.168.0.37:8080/changeAlertState?id_vehiculo=${id_vehiculo}`;
+  const url = `http://192.168.56.1:8080/changeAlertState?id_vehiculo=${id_vehiculo}`;
   const requestOptions = {
     method: 'GET',
     headers: {

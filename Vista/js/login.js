@@ -18,7 +18,7 @@ function enviarFormulario() {
       body: JSON.stringify(formData)
     };
   
-    fetch('http://192.168.0.37:8080/loginUser', requestOptions)
+    fetch('http://192.168.56.1:8080/loginUser', requestOptions)
       .then(response => {
         if (!response.ok) {
           throw new Error('Error en la solicitud');
