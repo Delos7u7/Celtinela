@@ -1,53 +1,55 @@
-/* Va en todas las páginas */
+/* General Styles */
 * {
     padding: 0;
     margin: 0;
     text-decoration: none;
     box-sizing: border-box;
     list-style: none;
+    font-family: 'Roboto', sans-serif;
 }
 
-body,
-html {
+body, html {
     height: 100%;
 }
 
 .content {
     min-height: 100vh;
     background: linear-gradient(135deg, #D65A51, #B24741, #8E3431, #6A2121, #451616, #000000);
-}
-
-
-/* Aquí empieza el código de esta página */
-.titleUsuario-container { /* Cambiado el nombre del contenedor */
-    width: 100%;
-    height: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 20px;
 }
 
-.button-add--container { /* Cambiado el nombre de la clase */
+/* Title Container */
+.titleUsuario-container {
+    width: 100%;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.button-add--container {
     padding: 15px;
 }
 
-.button-add--container p { /* Cambiado el nombre de la clase */
+.button-add--container p {
     color: white;
     font-size: 1.8rem;
     font-weight: 800;
     letter-spacing: 0.1em;
 }
 
-.añadirIcon { /* Cambiado el nombre de la clase */
-    margin-left: 10px;
-    font-size: 1.1rem;
-    color: white;
-}
-
-.datosUsuario--container { /* Cambiado el nombre del contenedor */
+/* Form Container */
+.datosUsuario--container {
     width: 100%;
-    height: auto;
+    max-width: 500px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -55,87 +57,65 @@ html {
     color: white;
 }
 
-.datosUsuario--container .input-container { /* Cambiado el nombre de la clase */
-    margin-bottom: 10px;
-    transition: transform 0.3s ease;
-    /* Agregar transición para la transformación */
-    width: 85%;
-    height: auto;
-}
-
-.datosUsuario--container .input-container input { /* Cambiado el nombre de la clase */
+.input-container {
     width: 100%;
-}
-
-.datosUsuario--container .input-container p { /* Cambiado el nombre de la clase */
-    margin-bottom: 10px;
-}
-
-.datosUsuario--container .input-container:hover, /* Cambiado el nombre de la clase */
-.datosUsuario--container .input-container:active { /* Cambiado el nombre de la clase */
-    font-weight: bolder;
-    transform: scale(1.05);
-    /* Escalar el contenedor al pasar el cursor */
-}
-
-.datosUsuario--container .input-datosUsuario { /* Cambiado el nombre de la clase */
-    border-style: none;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
-    background: transparent;
-    background: none;
-    color: white;
-    caret-color: rgba(0, 0, 0, 0.4);
-    transition: border-bottom 0.3s ease;
-    /* Agregar transición para el borde inferior */
-    width: 90%;
-}
-
-.datosUsuario--container .input-datosUsuario:hover, /* Cambiado el nombre de la clase */
-.datosUsuario--container .input-datosUsuario:active { /* Cambiado el nombre de la clase */
-    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
-}
-
-.datosUsuario--container .input-datosUsuario:focus { /* Cambiado el nombre de la clase */
-    outline: none;
-    transform: scale(1.05);
-    /* Escalar el input al enfocar */
-}
-
-.icon--container {
-    margin-top: 10px;
-    padding: 20px;
-    background-color: #0F243D;
-    border-radius: 50%;
+    margin-bottom: 15px;
     position: relative;
-  }
-  
-  .iconCamera {
-    font-size: 40px;
-  }
-  
-  #cameraPreview {
-    display: none;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-
-  .iconSuccess {
-    font-size: 40px; /* Tamaño del ícono */
-    color: white; /* Color del ícono */
-    background-color: transparent; /* Fondo transparente */
 }
 
+.input-container p {
+    margin-bottom: 5px;
+    font-size: 1rem;
+}
+
+.input-datosUsuario {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.4);
+    background: transparent;
+    color: white;
+    transition: border-bottom 0.3s ease;
+}
+
+.input-datosUsuario:focus {
+    outline: none;
+    border-bottom: 2px solid #fff;
+    transform: scale(1.05);
+}
+
+/* Button Container */
 .sendButton--container {
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
+    width: 100%;
     display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
+    justify-content: center;
+    margin-top: 20px;
 }
 
 .sendIcon {
-    font-size: 30px;
+    font-size: 1.2rem;
     color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #D65A51;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.sendIcon:hover {
+    background-color: #B24741;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .datosUsuario--container {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .sendIcon {
+        width: 80%;
+        padding: 5px;
+    }
 }

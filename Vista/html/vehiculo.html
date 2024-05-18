@@ -14,12 +14,10 @@
         <header>
             <span class="bi bi-list menuIcon"></span>
             <span class="bi bi-bell notificationIcon">
-                <p id="no-notification--id">
-                
-                </p>
+                <p id="no-notification--id"></p>
                 <div class="notification-container"></div>
             </span>
-            <nav class="navMenu sideNav"> <!-- Aquí he cambiado la clase a navMenu -->
+            <nav class="navMenu sideNav">
                 <ul>
                     <li><a href="../html/vehiculosRegistrados.html">Inicio</a></li>
                     <li><a href="../html/perfil.html">Perfil</a></li>
@@ -34,15 +32,14 @@
             </div>
         </div>
         <div class="mapa--container">
-             <iframe
+            <iframe
                 class="mapa"
                 width="80%"
                 height="350"
                 style="border:0; border-radius: 20px;"
-                frameborder="0" style="border:0"
-                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBIiZxQFCekeM29UC4gQD503JK0kLDf3Eg&q=Space+Needle,Seattle+WA" allowfullscreen> 
-            <!-- src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBIiZxQFCekeM29UC4gQD503JK0kLDf3Eg&amp;q=Space+Needle,Seattle+WA&amp;maptype=dark"
-        allowfullscreen> -->
+                frameborder="0"
+                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBIiZxQFCekeM29UC4gQD503JK0kLDf3Eg&q=Space+Needle,Seattle+WA"
+                allowfullscreen>
             </iframe>
         </div>
         <div class="tabla--container">
@@ -85,7 +82,6 @@
                 </div>
             </div>
         </div>
-
         <div class="address--container">
             <div class="alert-table">
                 <div class="alert-table--header">
@@ -95,16 +91,10 @@
                     <p class="header date">Fecha</p>
                 </div>
                 <div class="alert-table--body">
-                    <p id="noalert" class="header noalert"></p>
-                    <p id="address" class="header address"></p>
-                    <p id="latitud" class="header lat"></p>
-                    <p id="longitud" class="header long"></p>
-                    <p id="date" class="header date"></p>
-                    <p id="hour" class="header hour"></p>
+                    <!-- Aquí se llenarán las filas dinámicamente -->
                 </div>
             </div>
         </div>
-
         <div id="revisar-alerta" class="revisar-alerta--container">
             <div class="revisar-alerta">
                 <button class="revisar-alerta">Revisar Alertas</button>
@@ -149,9 +139,10 @@
                 </form>
             </div>
         </div>
+    </div>
+    <script src="../js/vehiculosRegistrados.js"></script>
+    <script src="../js/vehiculo.js"></script>
+    <script src="../js/notificaciones.js"></script>
 </body>
-<script src="../js/vehiculosRegistrados.js"></script>
-<script src="../js/vehiculo.js"></script>
-<script src="../js/notificaciones.js"></script>
 
 </html>
