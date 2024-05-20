@@ -30,7 +30,7 @@ function linkDevice() {
         body: JSON.stringify(data)
     };
 
-    fetch(`http://192.168.1.29:8080/linkDevice`, requestOptions)
+    fetch(`http://178.6.12.189:8080/linkDevice`, requestOptions)
         .then(response => {
             if (!response.ok) {
                 throw new Error('Error al enviar los datos al backend');
@@ -47,7 +47,7 @@ function linkDevice() {
 }
 
 function getAlerts() {
-    const url = `http://192.168.1.29:8080/getAlerts?id_vehiculo=${id_vehiculo}`;
+    const url = `http://178.6.12.189:8080/getAlerts?id_vehiculo=${id_vehiculo}`;
     const requestOptions = {
         method: 'GET',
         headers: { 'Content-Type': 'application/json' }
@@ -116,7 +116,7 @@ function updateMap(latitud, longitud) {
 }
 
 function changeAlertState() {
-    const url = `http://192.168.1.29:8080/changeAlertState?id_vehiculo=${id_vehiculo}`;
+    const url = `http://178.6.12.189:8080/changeAlertState?id_vehiculo=${id_vehiculo}`;
     const requestOptions = {
         method: 'GET',
         headers: { 'Content-Type': 'application/json' }

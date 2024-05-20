@@ -17,7 +17,7 @@ function getCookie(name) {
 
 function enviarToken() {
     const token = ObtenerCookieDocumento(); // Obtener el token de las cookies
-    const url = `http://192.168.56.1:8080/getvehicles?token=${token}`; // Agregar el token como parámetro en la URL
+    const url = `http://178.6.12.189:8080/getvehicles?token=${token}`; // Agregar el token como parámetro en la URL
 
     const requestOptions = {
         method: 'GET',
@@ -86,7 +86,7 @@ function enviarToken() {
 }
 
 function getIdVehicle(token, id_vehiculo) {
-    const url = `http://192.168.56.1:8080/getVehicle?token=${token}&idVehiculo=${id_vehiculo}`;
+    const url = `http://178.6.12.189:8080/getVehicle?token=${token}&idVehiculo=${id_vehiculo}`;
 
     const requestOptions = {
         method: 'GET',
