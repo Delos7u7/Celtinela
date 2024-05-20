@@ -18,9 +18,11 @@ document.getElementById('serie').textContent = serie;
 
 function linkDevice() {
     const id_dispositivo = document.getElementById("numero_serie").value;
+    const telefono = document.getElementById("telefono").value
 
     const data = {
         id_dispositivo: id_dispositivo,
+        telefono: telefono,
         id_vehiculo: id_vehiculo
     };
 
