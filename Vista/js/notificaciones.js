@@ -35,7 +35,7 @@ document.addEventListener('click', (event) => {
 });
 function notificar() {
   const token = ObtenerCookieDocumento();
-  const url = `http://178.6.12.189:8080/notification?token=${token}`;
+  const url = `http://192.168.0.37:8080/notification?token=${token}`;
   fetch(url)
     .then(response => {
       if (!response.ok) {
