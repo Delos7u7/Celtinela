@@ -22,7 +22,7 @@ function enviarFormulario() {
         body: JSON.stringify(formData)
     };
 
-    fetch('http://178.6.12.189:8080/createUser', requestOptions)
+    fetch('http://178.6.5.213:8080/createUser', requestOptions)
         .then(response => {
             if (!response.ok) {
                 throw new Error('Error en la solicitud');

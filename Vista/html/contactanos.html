@@ -6,19 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Celtinela - Contáctanos</title>
     <link rel="stylesheet" href="../css/contactanos.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.3/font/bootstrap-icons.min.css">
+    
 </head>
 
 <body>
     <div class="content">
         <header>
             <span class="bi bi-list menuIcon"></span>
-            <span class="bi bi-bell notificationIcon">
-                <p id="no-notification--id">
-                
-                </p>
-                <div class="notification-container"></div>
-            </span>
+            <span class="bi bi-bell notificationIcon"></span>
             <nav class="navMenu sideNav"> <!-- Aquí he cambiado la clase a navMenu -->
                 <ul>
                     <li><a href="../html/vehiculosRegistrados.html">Inicio</a></li>
@@ -28,13 +24,85 @@
                 <i class="bi bi-box-arrow-left iconoCerrarSesion"></i>
             </nav>
         </header>
-        <div class="contactanos--container">
-            <p>Contáctanos</p>
-            <p>gotasverdes@gmail.com</p>
-            <p>771-115-0185</p>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#contacto" class="active" onclick="showSection('contacto')">Contacto</a></li>
+                <li><a href="#sobre-nosotros" onclick="showSection('sobre-nosotros')">Sobre Nosotros</a></li>
+                <li><a href="#comentario" onclick="showSection('comentario')">Envíanos un comentario</a></li>
+            </ul>
+        </nav>
+
+        <div class="section active" id="contacto">
+            <div class="info-container">
+                <h6><strong>Correo Electrónico:</strong></h6> <p>gotasverdes@gmail.com</p>
+                <h6><strong>Número de Contacto:</strong></h6> <p>771-115-0185</p>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com" target="_blank" class="bi bi-instagram"></a>
+                    <a href="https://www.facebook.com" target="_blank" class="bi bi-facebook"></a>
+                    <a href="https://www.twitter.com" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16">
+                            <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
         </div>
+
+        <div class="section" id="sobre-nosotros" style="display:none;">
+            <div class="info-container">
+                <p>Somos un grupo de estudiantes apasionados por la tecnología y el desarrollo de software.
+                    Nos especializamos en la creación de aplicaciones y páginas web, ofreciendo servicios
+                    completos tanto en el frontend como en el backend.</p>
+                <h3>Nuestros Servicios</h3>
+                <div class="servicios">
+                    <h4>Desarrollo Frontend:</h4>
+                    <ul>
+                        <li>Creación de interfaces interactivas y responsivas.</li>
+                        <li>Optimización para múltiples dispositivos y navegadores.</li>
+                    </ul>
+
+                    <h4>Desarrollo Backend:</h4>
+                    <ul>
+                        <li>Implementación de servidores y bases de datos seguros y eficientes.</li>
+                        <li>Desarrollo de APIs y servicios web escalables.</li>
+                    </ul>
+
+                    <h4>Desarrollo Full Stack:</h4>
+                    <ul>
+                        <li>Soluciones integrales desde el diseño hasta la implementación.</li>
+                        <li>Coordinación entre frontend y backend para un flujo de trabajo cohesivo.</li>
+                    </ul>
+
+                    <h4>Diseño UX/UI:</h4>
+                    <ul>
+                        <li>Diseño centrado en el usuario.</li>
+                        <li>Prototipos y pruebas de usabilidad.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="section" id="comentario" style="display:none;">
+            <div class="form-container">
+                <form>
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="comentario">Comentario:</label>
+                    <textarea id="comentario" name="comentario" required></textarea>
+
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </div>
     </div>
 </body>
 <script src="../js/vehiculosRegistrados.js"></script>
-<script src="../js/notificaciones.js"></script>
+<script src="../js/contactanos.js"></script>
+
 </html>
