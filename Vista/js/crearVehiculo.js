@@ -44,7 +44,11 @@ function enviarFormulario() {
         body: JSON.stringify(formData)
     };
 
+<<<<<<< HEAD
     fetch('http://192.168.0.37:8080/createVehicle', requestOptions)
+=======
+    fetch('http://178.6.5.213:8080/createVehicle', requestOptions)
+>>>>>>> 18ff7718df34f98e09bc75343c8353c2909f2292
         .then(response => {
             if (!response.ok) {
                 throw new Error('Error en la solicitud: ' + response.statusText);
