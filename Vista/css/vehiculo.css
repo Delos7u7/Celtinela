@@ -7,6 +7,10 @@
     list-style: none;
 }
 
+:root {
+  color-scheme: light dark;
+}
+
 body,
 html {
     height: 100%;

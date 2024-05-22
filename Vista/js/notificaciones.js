@@ -87,3 +87,30 @@ function mostrarNotificaciones(notificaciones) {
       notificationContainer.appendChild(notificationItem);
     });
   }
+
+  function cerrarSesion() {
+    const token = ObtenerCookieDocumento();
+    console.log("token para cerrar sesion: "+token);
+    const url = 'http://192.168.0.37:8080/logout';
+    fetch(url, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ token: token })
+    })
+    .then(response => {
+        if (response.ok) {
+            // Aquí puedes añadir lógica para redirigir al usuario a la página de login u otra acción
+            console.log('Sesión cerrada exitosamente.');
+            window.location.href = '../../index.html';
+        } else {
+            console.error('Error al cerrar la sesión.');
+        }
+    })
+    .catch(error => {
+        console.error('Error en la solicitud:', error);
+    });
+  } 
+
+  document.getElementById('cerrarSesion').addEventListener('click', cerrarSesion);
