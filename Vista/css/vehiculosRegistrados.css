@@ -15,7 +15,8 @@ html {
 
 .content {
   min-height: 100vh;
-  background: linear-gradient(135deg, #D65A51, #B24741, #8E3431, #6A2121, #451616, #000000);*/
+  background-image: url('../imagenes/fondo2.jpg'); /* Reemplaza con la ruta a tu imagen */
+  
 }
 
 header {
@@ -130,7 +131,7 @@ header {
 
 .button-add--container p {
   color: white;
-  font-size: 1.8rem;
+  font-size: 2.2rem;
   font-weight: 800;
   letter-spacing: 0.1em;
 }
@@ -220,14 +221,16 @@ header {
   width: 100%;
   height: auto;
   border-radius: 20px;
-  background: radial-gradient(circle at center, #D45050, #BD4545, #A23C3C, #873434, #6E2F2F, #6A2B2B);
   margin-bottom: 10px;
   padding: 10px;
-  font-size: 15px;
+  font-size: 20px;
   display: flex;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.4); /* Agrega sombra en la parte inferior */
   text-decoration: none;
   color: white;
+  border: 1px solid white;
+  font-weight: 600;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
 }
 
 .left-side-tableVehi {
@@ -266,7 +269,7 @@ header {
 }
 
 .agregar-icon {
-  font-size: 2.5rem;
+  font-size: 2.9rem;
   /* Ajusta el tamaño del icono */
   color: #fff;
   /* Ajusta el color del icono */

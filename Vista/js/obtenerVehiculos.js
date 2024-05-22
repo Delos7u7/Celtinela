@@ -17,11 +17,7 @@ function getCookie(name) {
 
 function enviarToken() {
     const token = ObtenerCookieDocumento(); // Obtener el token de las cookies
-<<<<<<< HEAD
-    const url = `http://192.168.0.37:8080/getvehicles?token=${token}`; // Agregar el token como parámetro en la URL
-=======
-    const url = `http://178.6.5.213:8080/getvehicles?token=${token}`; // Agregar el token como parámetro en la URL
->>>>>>> 18ff7718df34f98e09bc75343c8353c2909f2292
+    const url = `http://192.168.0.37:8080/getvehicles?token=${encodeURIComponent(token)}`; // Agregar el token como parámetro en la URL
 
     const requestOptions = {
         method: 'GET',
@@ -54,34 +50,34 @@ function enviarToken() {
             // Iterar sobre los vehículos recibidos
             data.forEach((vehiculo, index) => {
                 // Crear contenedor de vehículo
-                const veiculoDiv = document.createElement('div');
-                veiculoDiv.classList.add('veihuculo-no', `${index + 1}`, 'left-side-tableVehi'); // Clases del contenedor de vehículo
+                const vehiculoDiv = document.createElement('div');
+                vehiculoDiv.classList.add('veihuculo-no', `${index + 1}`, 'left-side-tableVehi'); // Clases del contenedor de vehículo
                 
                 // Añadir el evento de click
-                veiculoDiv.addEventListener('click', () => {
+                vehiculoDiv.addEventListener('click', () => {
                     getIdVehicle(token, vehiculo.id_vehiculo);
                 });
                 
                 // Crear elementos para mostrar los datos del vehículo
                 const aliasParrafo = document.createElement('div');
                 aliasParrafo.classList.add('left-side-tableVehi--name');
-                aliasParrafo.innerHTML = `<p>Alias:</p><p>${vehiculo.alias_vehiculo}</p>`;
+                aliasParrafo.innerHTML = `<p>Alias:</p><p>${DOMPurify.sanitize(vehiculo.alias_vehiculo)}</p>`;
                 
                 const placaParrafo = document.createElement('div');
                 placaParrafo.classList.add('left-side-tableVehi--placa');
-                placaParrafo.innerHTML = `<p>Placa:</p><p>${vehiculo.placa}</p>`;
+                placaParrafo.innerHTML = `<p>Placa:</p><p>${DOMPurify.sanitize(vehiculo.placa)}</p>`;
                 
                 const noSerieParrafo = document.createElement('div');
                 noSerieParrafo.classList.add('left-side-tableVehi--numberID');
-                noSerieParrafo.innerHTML = `<p>No.Serie:</p><p>${vehiculo.num_serie_vin}</p>`;
+                noSerieParrafo.innerHTML = `<p>No.Serie:</p><p>${DOMPurify.sanitize(vehiculo.num_serie_vin)}</p>`;
                 
                 // Agregar los elementos al contenedor del vehículo
-                veiculoDiv.appendChild(aliasParrafo);
-                veiculoDiv.appendChild(placaParrafo);
-                veiculoDiv.appendChild(noSerieParrafo);
+                vehiculoDiv.appendChild(aliasParrafo);
+                vehiculoDiv.appendChild(placaParrafo);
+                vehiculoDiv.appendChild(noSerieParrafo);
                 
                 // Agregar el vehículo al contenedor principal
-                tablaVehiculosDiv.appendChild(veiculoDiv);
+                tablaVehiculosDiv.appendChild(vehiculoDiv);
             });
         
         }).catch(error => {
@@ -90,7 +86,7 @@ function enviarToken() {
 }
 
 function getIdVehicle(token, id_vehiculo) {
-    const url = `http://192.168.0.37:8080/getVehicle?token=${token}&idVehiculo=${id_vehiculo}`;
+    const url = `http://192.168.0.37:8080/getVehicle?token=${encodeURIComponent(token)}&idVehiculo=${encodeURIComponent(id_vehiculo)}`;
 
     const requestOptions = {
         method: 'GET',
@@ -111,7 +107,7 @@ function getIdVehicle(token, id_vehiculo) {
             // Hacer cualquier otra cosa con la respuesta del backend si es necesario
             
             // Redirigir a la página vehiculo.html después de procesar la respuesta
-            window.location.href = `../html/vehiculo.html?id_vehiculo=${data.id_vehiculo}&alias_vehiculo=${encodeURIComponent(data.alias_vehiculo)}&año=${data.año}&color=${encodeURIComponent(data.color)}&marca=${encodeURIComponent(data.marca)}&modelo=${encodeURIComponent(data.modelo)}&placa=${encodeURIComponent(data.placa)}&num_serie_vin=${encodeURIComponent(data.num_serie_vin)}`;
+            window.location.href = `../html/vehiculo.html?id_vehiculo=${encodeURIComponent(data.id_vehiculo)}&alias_vehiculo=${encodeURIComponent(data.alias_vehiculo)}&año=${encodeURIComponent(data.año)}&color=${encodeURIComponent(data.color)}&marca=${encodeURIComponent(data.marca)}&modelo=${encodeURIComponent(data.modelo)}&placa=${encodeURIComponent(data.placa)}&num_serie_vin=${encodeURIComponent(data.num_serie_vin)}`;
         }).catch(error => {
             console.error('Error:', error);
         });

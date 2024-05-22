@@ -16,8 +16,9 @@ body, html {
 
 .content {
     min-height: 100vh;
-    background: linear-gradient(135deg, #D65A51, #B24741, #8E3431, #6A2121, #451616, #000000);
-}
+    background-image: url('../imagenes/fondo2.jpg'); /* Reemplaza con la ruta a tu imagen */
+    
+  }
 
 /* Header */
 header {
@@ -26,7 +27,6 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #0F243D;
     padding: 0 20px;
 }
 

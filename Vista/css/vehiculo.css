@@ -17,8 +17,9 @@ html {
 }
 
 .content {
-    min-height: 100vh;
-    background: linear-gradient(135deg, #D65A51, #B24741, #8E3431, #6A2121, #451616, #000000);
+  min-height: 100vh;
+  background-image: url('../imagenes/fondo2.jpg'); /* Reemplaza con la ruta a tu imagen */
+  
 }
 
 header {

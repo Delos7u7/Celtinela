@@ -228,3 +228,10 @@ width: 300px; /* Ancho */
 background-color: #1B3B5F;
 color: #FFD700; /* Cambia el color del texto al pasar el ratón */
 }
+
+.usuarioIncorrecto{
+  color: red;
+  font-size: 12px;
+  font-weight: 800;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+}

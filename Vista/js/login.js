@@ -34,7 +34,7 @@ function enviarFormulario() {
         window.location.href = 'Vista/html/vehiculosRegistrados.html';
       })
       .catch(error => {
-        console.error('Error:', error);
+        document.getElementById("Usuario-incorrecto").textContent="Usuario y/o contraseña incorrecto"
       });
   }
   

@@ -14,12 +14,10 @@
     <header>
       <span class="bi bi-list menuIcon"></span>
       <span class="bi bi-bell notificationIcon">
-        <p id="no-notification--id">
-                
-        </p>
-          <div class="notification-container"></div>
+        <p id="no-notification--id"></p>
+        <div class="notification-container"></div>
       </span>
-      <nav class="navMenu sideNav"> <!-- Aquí he cambiado la clase a navMenu -->
+      <nav class="navMenu sideNav">
         <ul>
           <li><a href="../html/vehiculosRegistrados.html">Inicio</a></li>
           <li><a href="../html/perfil.html">Perfil</a></li>
@@ -34,25 +32,8 @@
       </div>
     </div>
     <div class="tablaVehiculos--container">
-      <div class="tablaVehiculos">
-        <a href="./vehiculo.html" class="veihuculo-no 1">
-        <div class="veihuculo-no 1">
-          <div class="left-side-tableVehi">
-            <div class="left-side-tableVehi--name">
-              <p>Alias: </p>
-              <p>Camión 1</p>
-            </div>
-            <div class="left-side-tableVehi--placa">
-              <p>Placa: </p>
-              <p>VHG-7-GDJ</p>
-            </div>
-            <div class="left-side-tableVehi--numberID">
-              <p>No.Serie:</p>
-              <p>1202102020201</p>
-            </div>
-          </div>
-        </div>
-      </a>
+      <div class="tablaVehiculos" id="vehiculosContainer">
+        <!-- Contenido de vehículos se inserta dinámicamente aquí -->
       </div>
     </div>
     <div class="flotante-container">
@@ -61,6 +42,7 @@
       </a>
     </div>
   </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.3.4/purify.min.js"></script>
   <script src="../js/obtenerVehiculos.js"></script>
   <script src="../js/vehiculosRegistrados.js"></script>
   <script src="../js/notificaciones.js"></script>
